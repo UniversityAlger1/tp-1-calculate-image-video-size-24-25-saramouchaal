@@ -1,12 +1,27 @@
-#include "config/grayScaleImage.h"
-// Parameters:
-//   w: width of the image
-//   h: height of the image
-// Return value
-//   grayScale size of the image Bitmap (in byte)
-float grayScaleImage(int w, int h) {
-   // YOUR CODE HERE - BEGIN
+#include <stdio.h>
 
-   // YOUR CODE HERE - END
-   return 0;
+// Function 
+float grayScaleImage(int w, int h) {
+    // Calculate the size (each pixel is 1 byte)
+    float size = (float)(w * h);
+    return size; // Return the size in bytes
+}
+
+int main() {
+    int width, height;
+
+    // Testing
+    printf("Enter the width of the image: ");
+    scanf("%d", &width);
+
+    printf("Enter the height of the image: ");
+    scanf("%d", &height);
+
+    // Calculate the size
+    float size = grayScaleImage(width, height);
+
+    // Display the result
+    printf("The size of the grayscale image is: %.0f bytes\n", size);
+
+    return 0;
 }
